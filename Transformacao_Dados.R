@@ -35,3 +35,12 @@ jan1 <- filter(flights, month == 1, day == 1)
 
 # Imprimindo e salvando o resultado da filtragem de voos realizados em 25 de dezembro
 (dec25 <- filter(flights, month == 12, day == 25))
+
+# Erros ocorridos pelo uso de = ao invés de ==
+filter(flights, month = 1)
+sqrt(2) ^ 2 == 2
+1 / 49 * 49 == 1
+
+# Utilizando o Near para obter valores com número finito de dígitos
+near(sqrt(2)^2, 2)
+near(1 / 49 * 49, 1)
