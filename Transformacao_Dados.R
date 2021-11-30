@@ -44,3 +44,13 @@ sqrt(2) ^ 2 == 2
 # Utilizando o Near para obter valores com número finito de dígitos
 near(sqrt(2)^2, 2)
 near(1 / 49 * 49, 1)
+
+# Filtrando os voos que partiram em novembro e dezembro
+filter(flights, month == 11 | month == 12)
+
+# Filtrando os voos que partiram em novembro e dezembro e salvando em uma variavel
+nov_dec <- filter(flights, month %in% c(11, 12))
+
+# Filtrando voos que não tenham atrasado (na chegada ou na partida) por mais de duas horas
+filter(flights, !(arr_delay > 120 | dep_delay > 120))
+filter(flights, arr_delay <= 120, dep_delay <= 120)
