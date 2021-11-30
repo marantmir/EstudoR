@@ -26,3 +26,12 @@ View(airlines)
 View(airports)
 View(planes)
 View(weather)
+
+# Filtrando os Vôos realizados em 1 de janeiro
+filter(flights, month == 1, day == 1)
+
+# Salvando a filtragem de dados em uma variável
+jan1 <- filter(flights, month == 1, day == 1)
+
+# Imprimindo e salvando o resultado da filtragem de voos realizados em 25 de dezembro
+(dec25 <- filter(flights, month == 12, day == 25))
